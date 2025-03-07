@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Wallpaper Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Game Wallpaper Gallery</h1>
+            <div id="currentDateTime" class="date-time"></div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for games...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+            <button id="clearSearch"><i class="fas fa-times"></i></button>
+        </div>
+    </header>
+    
+    <div class="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="action">Action</button>
+        <button class="filter-btn" data-category="rpg">RPG</button>
+        <button class="filter-btn" data-category="sports">Sports</button>
+        <button class="filter-btn" data-category="racing">Racing</button>
+        <button class="filter-btn" data-category="other">Other</button>
+    </div>
+    
+    <main>
+        <div id="wallpapersGrid" class="wallpapers-grid"></div>
+    </main>
+    
+    <div class="pagination">
+        <button id="prevPage" disabled>&laquo; Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Next &raquo;</button>
+    </div>
+    
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <!-- Modal content will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="wallpaperGallery.js"></script>
+    <script src="modalDownloader.js"></script>
+</body>
+</html>
