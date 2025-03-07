@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameWall | Stunning Gaming Wallpapers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <i class="fas fa-gamepad"></i>
+            <span>GameWall</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#popular">Popular</a></li>
+                <li><a href="#newest">Newest</a></li>
+                <li><a href="#categories">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>Stunning Gaming Wallpapers</h1>
+                <p>Find high-quality wallpapers from your favorite games. Download and customize your desktop with stunning visuals from the gaming universe.</p>
+                <button class="cta-button">Explore Collection</button>
+            </div>
+        </section>
+        
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for games...">
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <section id="categories">
+            <h2 class="section-title">Categories</h2>
+            <div class="categories">
+                <div class="category active" data-category="all">All</div>
+                <div class="category" data-category="action">Action</div>
+                <div class="category" data-category="adventure">Adventure</div>
+                <div class="category" data-category="rpg">RPG</div>
+                <div class="category" data-category="shooter">Shooter</div>
+                <div class="category" data-category="strategy">Strategy</div>
+                <div class="category" data-category="sports">Sports</div>
+                <div class="category" data-category="racing">Racing</div>
+            </div>
+        </section>
+        
+        <section id="popular">
+            <h2 class="section-title">Popular Wallpapers</h2>
+            <div class="games-grid" id="popular-games">
+                <!-- Games will be loaded here via JS -->
+            </div>
+            <div class="loader" id="popular-loader"></div>
+        </section>
+        
+        <section id="newest">
+            <h2 class="section-title">Newest Releases</h2>
+            <div class="games-grid" id="newest-games">
+                <!-- Games will be loaded here via JS -->
+            </div>
+            <div class="loader" id="newest-loader"></div>
+        </section>
+    </main>
+    
+    <div class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <div class="modal" id="wallpaper-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal"><i class="fas fa-times"></i></button>
+            <h2 id="modal-title">Game Title</h2>
+            <img src="/api/placeholder/800/450" alt="Wallpaper Preview" class="wallpaper-preview" id="modal-image">
+            <div class="game-meta">
+                <div class="game-rating">
+                    <i class="fas fa-star"></i>
+                    <span id="modal-rating">4.5</span>
+                </div>
+                <div id="modal-release">Release: 2023</div>
+            </div>
+            <div class="platform-icons" id="modal-platforms">
+                <!-- Platforms will be loaded here -->
+            </div>
+            <p id="modal-description" style="margin: 1.5rem 0">Game description will be shown here...</p>
+            <h3>Download Wallpaper</h3>
+            <div class="wallpaper-options">
+                <div class="wallpaper-option" data-resolution="1920x1080">1920 x 1080</div>
+                <div class="wallpaper-option" data-resolution="2560x1440">2560 x 1440</div>
+                <div class="wallpaper-option" data-resolution="3840x2160">4K (3840 x 2160)</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">Wallpaper downloaded successfully!</div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GameWall</h3>
+                <p>Your ultimate source for high-quality gaming wallpapers. Customize your desktop with stunning visuals from your favorite games.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-reddit"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Adventure</a></li>
+                    <li><a href="#">RPG</a></li>
+                    <li><a href="#">Shooter</a></li>
+                    <li><a href="#">Strategy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 GameWall. All rights reserved. Powered by RAWG API.
+        </div>
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
